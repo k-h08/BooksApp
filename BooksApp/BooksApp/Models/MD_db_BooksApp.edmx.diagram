@@ -7,6 +7,7 @@
       <Diagram DiagramId="8511a477b8b14668842695536c64f5d8" Name="Diagram1">
         <EntityTypeShape EntityType="db_BooksAppModel.t_books" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="db_BooksAppModel.t_bookmarks" Width="1.5" PointX="3.375" PointY="0.75" />
+        <AssociationConnector Association="db_BooksAppModel.FK__t_bookmar__book___5AEE82B9" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
