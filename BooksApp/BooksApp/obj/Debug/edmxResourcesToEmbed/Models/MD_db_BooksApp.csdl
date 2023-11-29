@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_BooksAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="t_books">
+    <Key>
+      <PropertyRef Name="book_id" />
+    </Key>
+    <Property Name="book_id" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="book_name" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="buyDate" Type="DateTime" Precision="3" />
+    <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="db_BooksAppEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="t_books" EntityType="Self.t_books" />
+  </EntityContainer>
+</Schema>

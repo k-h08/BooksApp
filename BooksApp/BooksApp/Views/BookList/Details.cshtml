@@ -1,0 +1,42 @@
+﻿@model BooksApp.Models.t_books
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>t_books</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.book_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.book_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.buyDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.buyDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.link)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.book_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

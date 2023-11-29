@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_BooksAppModelStoreContainer" CdmEntityContainer="db_BooksAppEntities">
+    <EntitySetMapping Name="t_books">
+      <EntityTypeMapping TypeName="db_BooksAppModel.t_books">
+        <MappingFragment StoreEntitySet="t_books">
+          <ScalarProperty Name="book_id" ColumnName="book_id" />
+          <ScalarProperty Name="book_name" ColumnName="book_name" />
+          <ScalarProperty Name="buyDate" ColumnName="buyDate" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

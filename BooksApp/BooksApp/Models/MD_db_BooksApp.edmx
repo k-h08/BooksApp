@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="db_BooksAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="t_bookmarks">
+          <Key>
+            <PropertyRef Name="book_Id" />
+            <PropertyRef Name="page" />
+          </Key>
+          <Property Name="book_Id" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="page" Type="smallint" Nullable="false" />
+          <Property Name="comment" Type="text" />
+        </EntityType>
+        <EntityType Name="t_books">
+          <Key>
+            <PropertyRef Name="book_id" />
+          </Key>
+          <Property Name="book_id" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="book_name" Type="nvarchar" MaxLength="32" Nullable="false" />
+          <Property Name="buyDate" Type="datetime" />
+          <Property Name="link" Type="text" />
+        </EntityType>
+        <EntityContainer Name="db_BooksAppModelStoreContainer">
+          <EntitySet Name="t_bookmarks" EntityType="Self.t_bookmarks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="t_books" EntityType="Self.t_books" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db_BooksAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="t_books">
+          <Key>
+            <PropertyRef Name="book_id" />
+          </Key>
+          <Property Name="book_id" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="book_name" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="buyDate" Type="DateTime" Precision="3" />
+          <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="db_BooksAppEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="t_books" EntityType="Self.t_books" />
+          <EntitySet Name="t_bookmarks" EntityType="db_BooksAppModel.t_bookmarks" />
+        </EntityContainer>
+        <EntityType Name="t_bookmarks">
+          <Key>
+            <PropertyRef Name="book_Id" />
+            <PropertyRef Name="page" />
+          </Key>
+          <Property Name="book_Id" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="page" Type="Int16" Nullable="false" />
+          <Property Name="comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db_BooksAppModelStoreContainer" CdmEntityContainer="db_BooksAppEntities">
+          <EntitySetMapping Name="t_books">
+            <EntityTypeMapping TypeName="db_BooksAppModel.t_books">
+              <MappingFragment StoreEntitySet="t_books">
+                <ScalarProperty Name="book_id" ColumnName="book_id" />
+                <ScalarProperty Name="book_name" ColumnName="book_name" />
+                <ScalarProperty Name="buyDate" ColumnName="buyDate" />
+                <ScalarProperty Name="link" ColumnName="link" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_bookmarks">
+            <EntityTypeMapping TypeName="db_BooksAppModel.t_bookmarks">
+              <MappingFragment StoreEntitySet="t_bookmarks">
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="page" ColumnName="page" />
+                <ScalarProperty Name="book_Id" ColumnName="book_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="なし" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -84,3 +84,9 @@ D:\dev\BooksApp\BooksApp\BooksApp\obj\Debug\BooksApp.csproj.CoreCompileInputs.ca
 D:\dev\BooksApp\BooksApp\BooksApp\obj\Debug\BooksApp.csproj.CopyComplete
 D:\dev\BooksApp\BooksApp\BooksApp\obj\Debug\BooksApp.dll
 D:\dev\BooksApp\BooksApp\BooksApp\obj\Debug\BooksApp.pdb
+D:\dev\BooksApp\BooksApp\BooksApp\bin\EntityFramework.dll
+D:\dev\BooksApp\BooksApp\BooksApp\bin\EntityFramework.SqlServer.dll
+D:\dev\BooksApp\BooksApp\BooksApp\bin\EntityFramework.xml
+D:\dev\BooksApp\BooksApp\BooksApp\bin\EntityFramework.SqlServer.xml
+D:\dev\BooksApp\BooksApp\BooksApp\bin\ja\EntityFramework.resources.dll
+D:\dev\BooksApp\BooksApp\BooksApp\bin\ja\EntityFramework.SqlServer.resources.dll
